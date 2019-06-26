@@ -3,7 +3,7 @@
 
 ## 线上测试准确率 
 - 单模型单次训练， online:0.7117
-- 单模型十折融合， online:0.7197
+- 单模型十折融合， online:0.7199
 
 ## 网络结构
 - 复现abadcandy pytorch版本的baseline，online：0.6623。
@@ -12,6 +12,8 @@
 - visit采用手动搭建的无预训练的简单网络提取特征（2个inception module和2个residual block）。
 - visit先经过简单处理为24×182×1的ndarray格式，然后经过归一化，标准化等5种不同的预处理，生成shape为24×182×5的数据，送入visit网络。
 - 对image和visit均进行了数据增强，应对过拟合（visit增强的方式：变换到0-255的像素范围内将其当作图片进行数据增强）。
+- visit和image网络采用不同的学习率。
+- 可以选择使用mixup。
 
 ## 运行环境
 - Ubuntu16.04
@@ -25,7 +27,11 @@ cd data
 mkdir train test  #创建训练image文件夹train, 测试图片文件夹test
 mkdir -p npy/train npy/test  #创建训练visit文件夹npy/train, 测试visit文件夹npy/test
 ```
-分别将image和visit数据放入相应文件夹中
+先准备数据，分别将去噪后的image和ndarray格式的visit数据放入相应文件夹中
+数据准备好后，运行multimain.py文件即可进行单模型单次训练。
+注：默认采用sgd训练60epoches，带warmup的cos学习率策略，训练大约3hours，为加速可以选择更换优化器，减少epoch数。
+
+
 - data/ 数据文件夹
 - preliminary/ 存放初赛数据csv文件
 - multimain.py 主程序
