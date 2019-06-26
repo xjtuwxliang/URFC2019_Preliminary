@@ -27,9 +27,9 @@ cd data
 mkdir train test  #创建训练image文件夹train, 测试图片文件夹test
 mkdir -p npy/train npy/test  #创建训练visit文件夹npy/train, 测试visit文件夹npy/test
 ```
-先准备数据，分别将去噪后的image和ndarray格式的visit数据放入相应文件夹中
-数据准备好后，运行multimain.py文件即可进行单模型单次训练。
-注：默认采用sgd训练60epoches，带warmup的cos学习率策略，训练大约3hours，为加速可以选择更换优化器，减少epoch数。
+- 先准备数据，分别将去噪后的image和ndarray格式的visit数据放入相应文件夹中
+- 数据准备好后，运行multimain.py文件即可进行单模型单次训练。
+- 注：默认采用sgd训练60epoches，带warmup的cos学习率策略，训练大约3hours，为加速可以选择更换优化器，减少epoch数。
 
 
 - data/ 数据文件夹
