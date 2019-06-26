@@ -14,7 +14,7 @@
 - 对image和visit均进行了数据增强，应对过拟合（visit增强的方式：变换到0-255的像素范围内将其当作图片进行数据增强）。
 
 ## 运行环境
-- Ubuntun16.04
+- Ubuntu16.04
 - Pytorch 1.1.0
 - NVIDIA GTX 1080Ti
 ## 运行说明
