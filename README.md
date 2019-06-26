@@ -33,11 +33,6 @@ mkdir -p npy/train npy/test  #创建训练visit文件夹npy/train, 测试visit�
 ### 运行程序
 数据准备好后，运行multimain.py文件即可进行单模型单次训练。
  
-注：
-1. 可在config.py中更改参数配置。
-2. 可在multimodal.py中更改网络结构。
-3. 默认采用sgd训练60epoches，带warmup的cos学习率策略，训练大约3hours，为加速可以选择更换优化器，减少epoch数。
-
 - data/ 数据文件夹
 - preliminary/ 存放初赛数据csv文件
 - multimain.py 主程序
@@ -45,3 +40,8 @@ mkdir -p npy/train npy/test  #创建训练visit文件夹npy/train, 测试visit�
 - preprocess.py 数据增强
 - config.py 参数配置
 - utils.py 通用模块
+
+注：
+1. 可在config.py中更改参数配置。
+2. 可在multimodal.py中更改网络结构。
+3. 默认采用sgd训练60epoches，带warmup的cos学习率策略，训练大约3hours，为加速可以选择更换优化器，减少epoch数。
