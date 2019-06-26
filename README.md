@@ -21,6 +21,7 @@
 - NVIDIA GTX 1080Ti×2
 ## 运行说明
 ### 准备数据
+同ABadCandy Pytorch版本的baseline
 ```
 cd URFC2019_Preliminary
 mkdir data
