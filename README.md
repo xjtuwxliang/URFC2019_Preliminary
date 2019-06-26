@@ -30,6 +30,10 @@ mkdir train test  #创建训练image文件夹train, 测试图片文件夹test
 mkdir -p npy/train npy/test  #创建训练visit文件夹npy/train, 测试visit文件夹npy/test
 ```
 分别将去噪后的image和ndarray格式的visit数据放入相应文件夹中。
+
+或者直接从[百度网盘链接](https://pan.baidu.com/s/1CTraj2tA2KX8TvNGMYiJFg )直接下载我们提供的已经预处理过的数据
+
+提取码：ha81 
  
 ### 2. 运行程序
 数据准备好后，运行multimain.py文件即可进行单模型单次训练。
