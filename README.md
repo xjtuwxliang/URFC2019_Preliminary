@@ -44,4 +44,4 @@ mkdir -p npy/train npy/test  #创建训练visit文件夹npy/train, 测试visit�
 注：
 1. 可在config.py中更改参数配置。
 2. 可在multimodal.py中更改网络结构。
-3. 默认采用sgd训练60epoches，带warmup的cos学习率策略，训练大约3hours，为加速可以选择更换优化器，减少epoch数。
+3. 默认采用sgd训练60epoches，带warmup的cos学习率策略，训练时间大约3hours，为加速可以选择更换优化器，减少epoch数。
