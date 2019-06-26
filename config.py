@@ -25,7 +25,7 @@ class DefaultConfigs(object):
 
     lr = 0.0004
     batch_size = 96
-    epochs = 1
+    epochs = 60
     step =20
     alpha = 0.5
     
