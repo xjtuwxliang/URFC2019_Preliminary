@@ -21,9 +21,13 @@
 ```
 cd URFC2019_Preliminary
 mkdir data
+cd data
+mkdir train test  #创建训练图片文件夹train, 测试图片文件夹test
+mkdir -p npy/train npy/test  #训练visit文件夹，train和test
 ```
+
 - data/ 数据文件夹
-- preliminary/初赛数据csv文件
+- preliminary/ 存放初赛数据csv文件
 - multimain.py 主程序
 - multimodal.py 网络模型
 - preprocess.py 数据增强
