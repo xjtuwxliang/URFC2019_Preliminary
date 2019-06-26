@@ -13,7 +13,7 @@
 - visit先经过简单处理为24×182×1的ndarray格式，然后经过归一化，标准化等5种不同的预处理，生成shape为24×182×5的数据，送入visit网络。
 - 对image和visit均进行了数据增强，应对过拟合（visit增强的方式：变换到0-255的像素范围内将其当作图片进行数据增强）。
 - visit和image网络采用不同的学习率。
-- 可以选择使用mixup。
+- 可以选择使用mixup，默认未使用。
 
 ## 运行环境
 - Ubuntu16.04
@@ -40,6 +40,8 @@ mkdir -p npy/train npy/test  #创建训练visit文件夹npy/train, 测试visit�
 - preprocess.py 数据增强
 - config.py 参数配置
 - utils.py 通用模块
-注：1. 可在config.py中更改参数配置。
+
+注：
+1. 可在config.py中更改参数配置。
 2. 可在multimodal.py中更改网络结构。
 3. 默认采用sgd训练60epoches，带warmup的cos学习率策略，训练大约3hours，为加速可以选择更换优化器，减少epoch数。
