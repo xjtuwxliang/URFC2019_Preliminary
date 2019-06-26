@@ -263,7 +263,7 @@ def training(train_data_list, val_data_list, test_files, fold):
             log.write("\n")
             time.sleep(0.01)
 
-        ### ---------- per fold emsemble best loss ckpt and best acc ckpt
+        ### ---------- per fold ensemble best loss ckpt and best acc ckpt
         checkpoint_loss = torch.load('checkpoints/best_models/%s_fold_%s_model_best_loss.pth.tar'% (config.model_name, str(fold)))
         model.load_state_dict(checkpoint_loss["state_dict"])
         test(test_loader, model, fold, checkpoint_loss, 'best_loss', False)
@@ -272,6 +272,7 @@ def training(train_data_list, val_data_list, test_files, fold):
         test(test_loader, model, fold, checkpoint_acc, 'best_acc', False)
         test_ensemble_loss_acc(test_loader, fold, [checkpoint_loss, checkpoint_acc], 'ensemble', not config.k_fold)
 
+    ### ----------- last kfold ensemble all before k ensemble ckpts
     if config.k_fold and fold == config.num_kf:
         mean_npy = np.zeros([10000, 9])
         for i in range(1, config.num_kf+1):
