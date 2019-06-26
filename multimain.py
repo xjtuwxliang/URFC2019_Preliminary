@@ -287,7 +287,8 @@ def main():
     fold = 0
     all_files = pd.read_csv(config.train_csv)
     test_files = pd.read_csv(config.test_csv)
-
+    
+    ### -------- kfold or not kfold ---------------
     if not config.k_fold:
         train_data_list, val_data_list = train_test_split(all_files, test_size=0.1, random_state = 2050)
         training(train_data_list, val_data_list, test_files, fold)
