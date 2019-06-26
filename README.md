@@ -22,10 +22,10 @@
 cd URFC2019_Preliminary
 mkdir data
 cd data
-mkdir train test  #创建训练图片文件夹train, 测试图片文件夹test
-mkdir -p npy/train npy/test  #训练visit文件夹，train和test
+mkdir train test  #创建训练image文件夹train, 测试图片文件夹test
+mkdir -p npy/train npy/test  #创建训练visit文件夹npy/train, 测试visit文件夹npy/test
 ```
-
+分别将image和visit数据放入相应文件夹中
 - data/ 数据文件夹
 - preliminary/ 存放初赛数据csv文件
 - multimain.py 主程序
