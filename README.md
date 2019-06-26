@@ -6,7 +6,7 @@
 - 单模型十折融合， online:0.7199
 
 ## 网络结构
-- 复现abadcandy pytorch版本的baseline，online：0.6623。
+- 复现[abadcandy pytorch版本的baseline](https://github.com/ABadCandy/BaiDuBigData19-URFC)，online：0.6623。
 - 采用image，visit双网络，分别生成256维特征，concat后得到512维特征全连接到9维输出。
 - image采用imagenet上预训练的 ResNet-50 提取特征。
 - visit采用手动搭建的无预训练的简单网络提取特征（2个inception module和2个residual block）。
@@ -18,7 +18,7 @@
 ## 运行环境
 - Ubuntu16.04
 - Pytorch 1.1.0
-- NVIDIA GTX 1080Ti
+- NVIDIA GTX 1080Ti×2
 ## 运行说明
 ### 准备数据
 ```
