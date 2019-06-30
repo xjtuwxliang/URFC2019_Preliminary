@@ -2,8 +2,8 @@
 2019 The 5th Baidu & XJTU Big Data Contest The First IKCEST “The Belt and Road” International Big Data Contest
 
 ## 线上测试准确率 
-- 单模型单次训练， online:0.7117
-- 单模型十折融合， online:0.7199 排名：19
+- 单模型单次训练， online: 0.7117
+- 单模型十折融合， online: 0.7199   排名：19
 
 ## 网络结构及改进
 - 复现[ABadCandy Pytorch版本的baseline](https://github.com/ABadCandy/BaiDuBigData19-URFC)，online：0.6678。
